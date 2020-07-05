@@ -30,15 +30,15 @@ resource "google_sql_database_instance" "db-inst" {
     disk_size         = var.cloudsql_disk_size_gb
     availability_type = "REGIONAL"
 
-    database_flags {
-      name  = "autovacuum"
-      value = "on"
-    }
+#    database_flags {
+#      name  = "autovacuum"
+#      value = "on"
+#    }
 
-    database_flags {
-      name  = "max_connections"
-      value = "100000"
-    }
+#    database_flags {
+#      name  = "max_connections"
+#      value = "100000"
+#    }
 
     backup_configuration {
       enabled    = true
